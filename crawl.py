@@ -1,7 +1,7 @@
 
 import requests
 import urllib3
-for x in range(27000001,27011000):
+for x in (27000001,27000002,27001203):
     urllib3.disable_warnings()
     # scraping_url = "https://diemthi.laodong.vn/tra-cuu-diem-thi-thpt-xem-diem-thi-dai-hoc-2022.html?sbd=" + 
     scraping_url = 'https://dantri.com.vn/thpt/1/0/99/'+str(x)+'/2021/0.2/search-gradle.htm'
