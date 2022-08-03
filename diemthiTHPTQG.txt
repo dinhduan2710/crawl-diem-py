@@ -1,3 +1,0 @@
-SBD 27000001 Toan 7.60 Van 6.00 Ngoaingu 3.80 Vatly 7.00 Hoahoc 8.00 Sinhhoc 4.75 KHTN 6.58 Lichsu None Dialy None GDCD None KHXH None
-SBD 27000002 Toan 6.80 Van 7.75 Ngoaingu 5.60 Vatly None Hoahoc None Sinhhoc None KHTN None Lichsu 7.00 Dialy 8.50 GDCD 9.00 KHXH 8.17
-SBD 27001203 Toan 6.00 Van 8.50 Ngoaingu 3.00 Vatly None Hoahoc None Sinhhoc None KHTN None Lichsu 8.75 Dialy 9.00 GDCD 9.00 KHXH 8.92
