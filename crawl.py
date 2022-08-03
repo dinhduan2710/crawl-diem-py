@@ -1,15 +1,15 @@
 
 import requests
+import urllib3
 for x in range(27000001,27011000):
-    scraping_url = "https://diemthi.laodong.vn/tra-cuu-diem-thi-thpt-xem-diem-thi-dai-hoc-2022.html?sbd=" + str(x)
+    urllib3.disable_warnings()
+    # scraping_url = "https://diemthi.laodong.vn/tra-cuu-diem-thi-thpt-xem-diem-thi-dai-hoc-2022.html?sbd=" + 
+    scraping_url = 'https://dantri.com.vn/thpt/1/0/99/'+str(x)+'/2021/0.2/search-gradle.htm'
     payload = {}
     headers = {}
-    response = requests.request(
-        "GET",scraping_url, headers=headers, data=payload
-    )
+    response = requests.get(scraping_url, allow_redirects=False,verify=False)
     info = response.json()['student']
-    diem = "sbd {} Toan {} Van {} NoaiNgu {} Vatly {} HoaHoc {} SinhHoc {} TBKHTN {} LichSu {} DiaLy {} GDCD {} TBKHXH {}".format(
-        info['sbd'],info['toan'],info['van'],info['ngoaingu'],info['vatli'],info['hoahoc'],info['sinhhoc'],info['fiemtbtn'],info['lichsu'],info['diali'],info['gdcd'],info['tbkhxh']
-    ),
+    diem = "SBD {} Toan {} Van {} Ngoaingu {} Vatly {} Hoahoc {} Sinhhoc {} KHTN {} Lichsu {} Dialy {} GDCD {} KHXH {}".format(
+        info['sbd'], info['toan'], info['van'], info['ngoaiNgu'], info['vatLy'], info['hoaHoc'], info['sinhHoc'], info['diemTBTuNhien'], info['lichSu'], info['diaLy'], info['gdcd'], info['diemTBXaHoi'])
     diemthi = str(diem)
     print(diemthi)
