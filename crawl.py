@@ -6,9 +6,9 @@ import numpy as np
 import openpyxl
 import xlrd
 
-f = open("diemthiTHPTQG.xlsx", 'a')
+f = open("diemthiTHPTQG.xls", 'a')
 
-loc = ("SBD.xlsx")
+loc = ("sbd-data.xls")
 
 wb = xlrd.open_workbook(loc)
 sheet = wb.sheet_by_index(0)
