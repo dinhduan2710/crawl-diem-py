@@ -3,9 +3,11 @@ import requests
 import urllib3
 import pandas
 from pandas import ExcelFile
+import numpy as np
 
 f = open("diemthiTHPTQG.txt", 'a')
-movies_sheet1 = pandas.read_excel("SBD.xlsx",0)
+movies_sheet1 = pandas.read_excel("SBD.xlsx",index_col=0)
+print(movies_sheet1)
 col = movies_sheet1.iloc[:, :0]
 for x in movies_sheet1:
     urllib3.disable_warnings()
