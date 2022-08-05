@@ -1,11 +1,15 @@
 
 import requests
 import urllib3
+import pandas
+from pandas import ExcelFile
+
 f = open("diemthiTHPTQG.txt", 'a')
-for x in (27000001,27000002,27001203):
+movies_sheet1 = pandas.read_excel("SBD.xlsx",0)
+col = movies_sheet1.iloc[:, :0]
+for x in movies_sheet1:
     urllib3.disable_warnings()
-    # scraping_url = "https://diemthi.laodong.vn/tra-cuu-diem-thi-thpt-xem-diem-thi-dai-hoc-2022.html?sbd=" + 
-    scraping_url = 'https://dantri.com.vn/thpt/1/0/99/'+str(x)+'/2022/0.2/search-gradle.htm'
+    scraping_url = 'https://dantri.com.vn/thpt/1/0/99/'+format(x)+'/2022/0.2/search-gradle.htm'
     payload = {}
     headers = {}
     response = requests.get(scraping_url, allow_redirects=False,verify=False)
